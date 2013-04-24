@@ -17,31 +17,51 @@
       function evaluateExpression(data) {
         input = document.getElementById("output").value = eval(input);
       }
+
+      function clearEntry(){
+        document.getElementById("output").value = " ";
+      }
+
+      function squareRoot(data){
+        input = document.getElementById("output").value = Math.sqrt(input);
+
+      }
+
     </script>
 
-    <h1>My Amazing Javascript / HTML Calculator</h1>
+    <h1>Javascript / HTML Calculator</h1>
 
     <div id="calculator">
 
       <form>
         <input type="text" id="output" />
       </form>
-
-      <button onclick="handleClick(1)">1</button>
-      <button onclick="handleClick(2)">2</button>
-      <button onclick="handleClick(3)">3</button>
-      <button onclick="handleClick(4)">4</button>
-      <button onclick="handleClick(5)">5</button>
-      <button onclick="handleClick(6)">6</button>
-      <button onclick="handleClick(7)">7</button>
-      <button onclick="handleClick(8)">8</button>
-      <button onclick="handleClick(9)">9</button>
-      <button onclick="handleClick('+')">+</button>
-      <button onclick="handleClick('-')">-</button>
-      <button onclick="handleClick('/')">/</button>
-      <button onclick="handleClick('*')">*</button>
-      <button onclick="evaluateExpression()">=</button>
-    </div>
-
+      <div id="row1">
+        <button onclick="handleClick(1)">1</button>
+        <button onclick="handleClick(2)">2</button>
+        <button onclick="handleClick(3)">3</button>
+      </div>
+      <div id="row2">
+        <button onclick="handleClick(4)">4</button>
+        <button onclick="handleClick(5)">5</button>
+        <button onclick="handleClick(6)">6</button>
+      </div>
+      <div id="row3">
+        <button onclick="handleClick(7)">7</button>
+        <button onclick="handleClick(8)">8</button>
+        <button onclick="handleClick(9)">9</button>
+      </div>
+      <div id="row4">
+        <button onclick="handleClick('+')">+</button>
+        <button onclick="handleClick(0)">0</button>
+        <button onclick="handleClick('-')">-</button> 
+      </div>
+      <div id="row5">
+        <button onclick="handleClick('/')">/</button>
+        <button onclick="handleClick('*')">*</button>
+        <button onclick="evaluateExpression()">=</button>
+      </div>
+      <button onclick="clearEntry()">C</button> 
+      <button onclick="squareRoot()">&#8730;</button> 
   </body>
 </html>
